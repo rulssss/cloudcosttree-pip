@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cloudcosttree"
+version = "0.1.35"
+description = "Estimate AWS infrastructure costs in a hierarchical tree before you apply"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "Proprietary" }
+authors = [{ name = "CloudCostTree" }]
+classifiers = [
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "Intended Audience :: System Administrators",
+  "Operating System :: MacOS",
+  "Operating System :: POSIX :: Linux",
+  "Operating System :: Microsoft :: Windows",
+  "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://cloudcosttree.com"
+Repository = "https://github.com/rulssss/cloudcosttree"
+
+[project.scripts]
+cloudcosttree = "cloudcosttree.launcher:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
